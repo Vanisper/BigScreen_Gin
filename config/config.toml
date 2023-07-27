@@ -1,0 +1,23 @@
+[server]
+host = "localhost"
+port = 8080
+
+# 允许开放访问的静态资源
+[assets]
+path = ["assets", "images", "weather"] # 允许访问的文件夹
+files = ["vite.svg"]        # 允许访问的根目录下的文件
+
+# 数据库配置
+[database]
+default = "mysql"          # 默认数据库
+list = ["mysql", "sqlite"] # 数据库列表
+[database.mysql]
+host = "localhost"         # 数据库地址
+port = 3306                # 数据库端口
+username = "xxb_bigscreen" # 数据库用户名
+password = "xxb_bigscreen" # 数据库密码
+database = "xxb_bigscreen" # 数据库名
+charset = "utf8mb4"        # 字符集
+loc = "Asia/Shanghai"      # 时区
+[database.sqlite]
+path = "db/sqlite.db" # 数据库文件路径

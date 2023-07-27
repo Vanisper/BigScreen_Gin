@@ -1,0 +1,53 @@
+# 养殖面积大户Top5
+GET http://127.0.0.1:8080/api/v1/farmer/list?pageNum=1&pageSize=5&orderField=pond_area&orderType=desc
+
+###
+# 新增养殖户
+POST http://127.0.0.1:8080/api/v1/farmer
+content-type: application/json
+
+{
+    "entity": "测试主体",
+    "brand": "测试产地",
+    "pond_area": 100,
+    "pond_num": 100,
+    "exp": 3,
+    "contact_man": "测试用户",
+    "phone": "12345678901",
+    "entity_type": 1,
+    "address_province": "江苏 省",
+    "address_city": "南京",
+    "address_district": "溧水",
+    "address_detail": "测试地区",
+    "pic": "http://www.baidu.com",
+    "uid": "d144e57f-9b8e-4ba0-a873-6fadf19bd264"
+}
+
+###
+# 获取最后一个id
+GET http://127.0.0.1:8080/api/v1/farmer/list?pageNum=1&pageSize=1&orderField=id&orderType=desc
+
+###
+# 获取城市信息: 接口有对参数进行处理
+GET http://127.0.0.1:8080/api/v1/city?name=江苏  省 ,   南京  市   ,溧水   区    
+
+###
+# 查看养殖户信息
+GET  http://127.0.0.1:8080/api/v1/farmer/b3267487-c917-40fe-b3ab-ffd75a8fbebc
+
+###
+# 更新养殖户信息
+PUT http://127.0.0.1:8080/api/v1/farmer/65b43c5b-4298-4960-9d84-4d8c20353edf
+content-type: application/json
+
+{
+    "insured_area": 9.12
+}
+
+###
+# 删除养殖户信息
+DELETE http://127.0.0.1:8080/api/v1/farmer/b3267487-c917-40fe-b3ab-ffd75a8fbebc
+
+###
+# 获取大屏主要数据
+GET http://127.0.0.1:8080/api/v1/bigscreen/maindata

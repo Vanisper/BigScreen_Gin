@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "gin热更新",
+			"type": "shell",
+			"command": "gin -p 6666 -a 8080 -i run main.go"
+		},
+	]
+}
